@@ -7,8 +7,8 @@ plt.rcParams['axes.unicode_minus'] = False  # マイナス記号の文字化け�
 
 # --- グラフの設定 ---
 # 1. ファイル名
-file_name = 'ver3_4.csv'
-
+file_name = '/Users/watanaberyouta/research/2025/research_Glove/force/20251109/log_2025-11-09_16-32-28_over.csv'
+output_filename = './force/scatter_plot_ranged.png'
 # 2. X軸とY軸に使う列の名前
 y_column = 'Primary Parameter'
 x_column = 'Force'
@@ -18,11 +18,11 @@ x_column = 'Force'
 
 #    データの先頭から、ここで指定した行数ぶんスキップします (10なら10行目までを無視し11行目から開始)
 #    Pythonの内部処理では0から数えるため、10行目から始めたい場合は「9」と設定します。
-start_index = 9
+start_index = 79
 
 #    データのここで指定した行で読み込みを終了します
 #    Pythonの内部処理では指定した値の手前までを読み込むため、50行目まで含めたい場合は「50」と設定します。
-end_index = 225
+end_index = 315
 # --------------------
 
 try:
@@ -53,7 +53,6 @@ try:
     plt.grid(True)
 
     # グラフを画像ファイルとして保存します
-    output_filename = 'scatter_plot_ranged.png'
     plt.savefig(output_filename)
 
     print(f"グラフを '{output_filename}' という名前で保存しました。")
